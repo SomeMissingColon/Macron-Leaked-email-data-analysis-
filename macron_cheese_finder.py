@@ -38,7 +38,7 @@ def cheese_finder(email, email_id):
 
 
 def main():
-    email_id = 216
+    email_id = 0
     for i in range(71848):
         print('looking thru email Id : %d' % (email_id))
         cheese_finder(parser_basic(request_web(geturl(email_id))), email_id)
