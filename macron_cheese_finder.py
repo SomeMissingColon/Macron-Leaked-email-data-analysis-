@@ -22,10 +22,9 @@ def parser_basic(html_file):
 
 
 def database_manager(email, email_id):
-    with open('emails.csv', "a", encoding='utf-8') as output_file:
+    with open('emails.csv', "w", encoding='utf-8') as output_file:
         csv_app = csv.writer(output_file)
         csv_app.writerow('email id: %d' % (email_id))
-        csv_app.writerow('email :'  + email)
 
 
 
@@ -38,7 +37,7 @@ def cheese_finder(email, email_id):
 
 
 def main():
-    email_id = 0
+    email_id = 216
     for i in range(71848):
         print('looking thru email Id : %d' % (email_id))
         cheese_finder(parser_basic(request_web(geturl(email_id))), email_id)
